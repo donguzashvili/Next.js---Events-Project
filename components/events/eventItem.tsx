@@ -26,7 +26,8 @@ function EventItem({ title, image, date, location, id }: propType) {
 
   return (
     <li className={classes.item}>
-      <img src={`/${image}`} alt="decoration" />
+      {/* not using Image from next.js because of github host issue */}
+      <img src={`${image}`} alt="decoration" />
       <div className={classes.content}>
         <div className={classes.summary}>
           <h2>{title}</h2>
