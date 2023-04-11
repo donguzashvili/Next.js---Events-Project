@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 import AddressIcon from "../icons/address-icon";
 import DateIcon from "../icons/date-icon";
 import LogisticsItem from "./logistics-item";
@@ -23,7 +25,7 @@ function EventLogistics({ date, address, image, imageAlt }: logisticProps) {
   return (
     <section className={classes.logistics}>
       <div className={classes.image}>
-        <img src={`${image}`} alt={imageAlt} />
+        <Image src={`/${image}`} alt={imageAlt} fill />
       </div>
       <ul className={classes.list}>
         <LogisticsItem Icon={DateIcon}>
