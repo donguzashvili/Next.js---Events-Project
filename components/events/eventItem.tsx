@@ -1,5 +1,4 @@
 import { propType } from "@/types/eventDataType";
-import Link from "next/link";
 
 // ** View
 import Button from "../ui/button";
@@ -24,7 +23,7 @@ function EventItem({ title, image, date, location, id }: propType) {
 
   return (
     <li className={classes.item}>
-      <img src={`/${image}`} alt="decoration" />
+      <img src={`${image}`} alt="decoration" />
       <div className={classes.content}>
         <div className={classes.summary}>
           <h2>{title}</h2>

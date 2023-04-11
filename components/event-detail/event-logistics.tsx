@@ -1,6 +1,8 @@
 import AddressIcon from "../icons/address-icon";
 import DateIcon from "../icons/date-icon";
 import LogisticsItem from "./logistics-item";
+
+// ** style
 import classes from "./event-logistics.module.css";
 
 type logisticProps = {
@@ -21,7 +23,7 @@ function EventLogistics({ date, address, image, imageAlt }: logisticProps) {
   return (
     <section className={classes.logistics}>
       <div className={classes.image}>
-        <img src={`/${image}`} alt={imageAlt} />
+        <img src={`${image}`} alt={imageAlt} />
       </div>
       <ul className={classes.list}>
         <LogisticsItem Icon={DateIcon}>
