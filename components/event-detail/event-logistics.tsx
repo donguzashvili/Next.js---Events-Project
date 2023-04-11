@@ -24,9 +24,8 @@ function EventLogistics({ date, address, image, imageAlt }: logisticProps) {
   });
   const addressText = address.replace(", ", "\n");
 
-  const imageUrl = router.basePath.includes("github") ? image : `/${image}`;
-
-  console.log(router);
+  const URL = typeof window !== "undefined" && window.location.origin ? window.location.origin : "";
+  const imageUrl = URL.includes("github") ? image : `/${image}`;
 
   return (
     <section className={classes.logistics}>
