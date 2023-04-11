@@ -26,9 +26,7 @@ function EventItem({ title, image, date, location, id }: propType) {
 
   return (
     <li className={classes.item}>
-      <div className={classes.image}>
-        <Image src={`/${image}`} alt="decoration" fill />
-      </div>
+      <img src={`/${image}`} alt="decoration" />
       <div className={classes.content}>
         <div className={classes.summary}>
           <h2>{title}</h2>
