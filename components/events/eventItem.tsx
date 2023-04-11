@@ -24,7 +24,9 @@ function EventItem({ title, image, date, location, id }: propType) {
   const formatedAddress = location.replace(", ", "\n");
   const exploreLink = `/events/${id}`;
 
-  const imageUrl = router.pathname.includes("github") ? image : `/${image}`;
+  const imageUrl = window.location.host.includes("github") ? image : `/${image}`;
+
+  console.log(window.location);
 
   return (
     <li className={classes.item}>
