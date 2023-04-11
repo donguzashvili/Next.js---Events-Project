@@ -11,8 +11,10 @@ import classes from "./eventItem.module.css";
 import DateIcon from "../icons/date-icon";
 import AddressIcon from "../icons/address-icon";
 import ArrowRightIcon from "../icons/arrow-right-icon";
+import { useRouter } from "next/router";
 
 function EventItem({ title, image, date, location, id }: propType) {
+  const router = useRouter();
   const formatedDate = new Date(date).toLocaleDateString("en-us", {
     day: "numeric",
     month: "long",
@@ -22,10 +24,12 @@ function EventItem({ title, image, date, location, id }: propType) {
   const formatedAddress = location.replace(", ", "\n");
   const exploreLink = `/events/${id}`;
 
+  const imageUrl = router.pathname.includes("github") ? image : `/${image}`;
+
   return (
     <li className={classes.item}>
       <div className={classes.image}>
-        <Image src={`/${image}`} alt="decoration" fill />
+        <Image src={imageUrl} alt="decoration" fill />
       </div>
       <div className={classes.content}>
         <div className={classes.summary}>
