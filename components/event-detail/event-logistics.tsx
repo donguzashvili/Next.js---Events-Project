@@ -24,15 +24,10 @@ function EventLogistics({ date, address, image, imageAlt }: logisticProps) {
   });
   const addressText = address.replace(", ", "\n");
 
-  const URL = typeof window !== "undefined" && window.location.origin ? window.location.origin : "";
-  const imageUrl = URL.includes("github") ? image : `/${image}`;
-
-  console.log(URL);
-
   return (
     <section className={classes.logistics}>
       <div className={classes.image}>
-        <Image src={imageUrl} alt={imageAlt} fill />
+        <img src={`/${image}`} alt={imageAlt} />
       </div>
       <ul className={classes.list}>
         <LogisticsItem Icon={DateIcon}>
