@@ -1,4 +1,5 @@
 import { propType } from "@/types/eventDataType";
+import Image from "next/image";
 
 // ** View
 import Button from "../ui/button";
@@ -24,7 +25,9 @@ function EventItem({ title, image, date, location, id }: propType) {
   return (
     <li className={classes.item}>
       {/* not using Image from next.js because of github host issue */}
-      <img src={image} alt="decoration" />
+      <div className={classes.image}>
+        <Image src={`https://donguzashvili.github.io/Next.js---Events-Project/${image}`} alt="decoration" fill />
+      </div>
       <div className={classes.content}>
         <div className={classes.summary}>
           <h2>{title}</h2>

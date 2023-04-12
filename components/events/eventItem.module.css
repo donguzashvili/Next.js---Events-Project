@@ -9,10 +9,15 @@
     gap: 1rem;
   }
   
-  .item img{
+  .image{
     width: 100%;
     object-fit: cover;
     height: 10rem;
+    position: relative;
+  }
+
+  .image img{
+    object-fit: cover;
   }
 
   .content {
@@ -81,7 +86,7 @@
       flex-direction: row;
     }
   
-    .item img{
+    .image{
         width: 40%;
         height: 14rem;
       }

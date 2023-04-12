@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 import AddressIcon from "../icons/address-icon";
 import DateIcon from "../icons/date-icon";
 import LogisticsItem from "./logistics-item";
@@ -24,7 +26,7 @@ function EventLogistics({ date, address, image, imageAlt }: logisticProps) {
     <section className={classes.logistics}>
       <div className={classes.image}>
         {/* not using Image from next.js because of github host issue */}
-        <img src={`${image}`} alt={imageAlt} />
+        <Image src={`https://donguzashvili.github.io/Next.js---Events-Project/${image}`} alt={imageAlt} fill />
       </div>
       <ul className={classes.list}>
         <LogisticsItem Icon={DateIcon}>
