@@ -24,7 +24,7 @@ function EventLogistics({ date, address, image, imageAlt }: logisticProps) {
     <section className={classes.logistics}>
       <div className={classes.image}>
         {/* not using Image from next.js because of github host issue */}
-        <img src={`/${image}`} alt={imageAlt} />
+        <img src={`${image}`} alt={imageAlt} />
       </div>
       <ul className={classes.list}>
         <LogisticsItem Icon={DateIcon}>
