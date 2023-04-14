@@ -3,6 +3,7 @@ import { getAllData, getFeaturedEvents } from "../helpers/apiUtil";
 import EventList from "@/components/events/eventList";
 import { eventType } from "@/types/eventDataType";
 import Head from "next/head";
+import NewsletterRegistration from "@/components/input/newsletterRegistration";
 
 const HomePage = ({ featuredEvents }: { featuredEvents: eventType[] }) => {
   return (
@@ -11,6 +12,7 @@ const HomePage = ({ featuredEvents }: { featuredEvents: eventType[] }) => {
         <title>NextJS Events</title>
         <meta name="description" content="Find a lot of great events that allow to evolve..." />
       </Head>
+      <NewsletterRegistration />
       <EventList items={featuredEvents} />
     </div>
   );

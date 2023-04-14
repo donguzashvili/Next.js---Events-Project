@@ -1,4 +1,6 @@
 import { eventType } from "@/types/eventDataType";
+import path from "path";
+import fs from "fs"
 
 export async function getFeaturedEvents() {
   const data = await getAllData()
@@ -35,3 +37,14 @@ export function handleFirebaseData(data: any){
   }
   return dataArray
 }
+
+export function getFilePath(){
+  return path.join(process.cwd(), "data", "data.json")
+}
+
+export function extractFileData(filePath: string){
+  const readFile = fs.readFileSync(filePath)
+  const data = JSON.parse(readFile.toString())
+  return data
+}
+
