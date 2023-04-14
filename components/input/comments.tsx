@@ -68,7 +68,7 @@ function Comments({ eventId }: { eventId: string }) {
         showNotification({ message: err.message || "Something went wrong!", title: "Error!", status: "error" });
         setIsFetchingComments(false);
       });
-  }, [reloadContent]);
+  }, [reloadContent, eventId, showNotification]);
 
   return (
     <section className={classes.comments}>
