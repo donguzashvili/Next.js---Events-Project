@@ -1,4 +1,4 @@
-import { propType } from "@/types/eventDataType";
+import { eventType } from "@/types/eventDataType";
 import Image from "next/image";
 
 // ** View
@@ -12,7 +12,7 @@ import DateIcon from "../icons/date-icon";
 import AddressIcon from "../icons/address-icon";
 import ArrowRightIcon from "../icons/arrow-right-icon";
 
-function EventItem({ title, image, date, location, id }: propType) {
+function EventItem({ title, image, date, location, id }: eventType) {
   const formatedDate = new Date(date).toLocaleDateString("en-us", {
     day: "numeric",
     month: "long",
@@ -24,9 +24,8 @@ function EventItem({ title, image, date, location, id }: propType) {
 
   return (
     <li className={classes.item}>
-      {/* not using Image from next.js because of github host issue */}
       <div className={classes.image}>
-        <Image src={`https://donguzashvili.github.io/Next.js---Events-Project/${image}`} alt="decoration" fill />
+        <Image src={`/${image}`} alt="decoration" fill />
       </div>
       <div className={classes.content}>
         <div className={classes.summary}>

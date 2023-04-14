@@ -1,11 +1,12 @@
-import { propType } from "@/types/eventDataType";
+import { eventType } from "@/types/eventDataType";
 import EventItem from "./eventItem";
 
 // ** styles
 import classes from "./eventList.module.css";
+import { GetServerSideProps } from "next";
 
 type props = {
-  items: propType[];
+  items: eventType[];
 };
 
 function EventList({ items }: props) {
@@ -17,5 +18,11 @@ function EventList({ items }: props) {
     </ul>
   );
 }
+
+export const getServerSideProps: GetServerSideProps = async (context) => {
+  return {
+    props: {},
+  };
+};
 
 export default EventList;
