@@ -1,6 +1,6 @@
 import { MongoClient } from "mongodb";
 
-const connectionString = `mongodb+srv://nextShota:Donguzashvil1@cluster0.gfrrsyz.mongodb.net/events`
+const connectionString = `mongodb+srv://${process.env.mongodb_username}:${process.env.mongodb_password}@${process.env.mongodb_clustername}.gfrrsyz.mongodb.net/${process.env.mongodb_database}`
 
 export async function connectDatabase(){
         const client = await MongoClient.connect(connectionString)
